@@ -234,5 +234,6 @@ public class GUI extends JFrame {
         add(buttonBack);
 
         setVisible(true);
+        setResizable(false);
     }
 }
