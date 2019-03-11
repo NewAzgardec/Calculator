@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">VkPage</string>
+    <string name="edit_button">edit</string>
+    <string name="photos">Photos</string>
+    <string name="number_of_photos">4</string>
+
+    <string name="search">search</string>
+    <string name="sms">sms</string>
+    <string name="other">other</string>
+    <string name="notifications">notifications</string>
+    <string name="gallery">gallery</string>
+
+</resources>
