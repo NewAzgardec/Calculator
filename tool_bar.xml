@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tool_bar"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@null">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="45dp"
+            app:srcCompat="@drawable/ic_search_black"
+            tools:ignore="MissingPrefix,VectorDrawableCompat" />
+
+        <ImageView
+            android:id="@+id/podcasts"
+            android:layout_width="178dp"
+            android:layout_height="76dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="45dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_toolbar" />
+
+        <ImageView
+            android:id="@+id/options"
+            android:layout_marginTop="18dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            app:srcCompat="@drawable/ic_more_vert_black"
+            tools:ignore="VectorDrawableCompat" />
+
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>
