@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">VkPage</string>
+    <string name="edit_button">edit</string>
+    <string name="photos">Photos</string>
+    <string name="number_of_photos">4</string>
+    <string name="number_of_friends">333 friends</string>
+
+    <string name="search">search</string>
+    <string name="sms">sms</string>
+    <string name="other">other</string>
+    <string name="notifications">notifications</string>
+    <string name="gallery">gallery</string>
+    <string name="status">What\'s new?</string>
+    <string name="user_name">Maryia Senkevich</string>
+    <string name="online_status">Online</string>
+    <string name="your_quote">Believe in yourself.</string>
+
+</resources>
