@@ -5,58 +5,64 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:id="@+id/firstImage"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/secondImage"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_podcasts1" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:id="@+id/secondImage"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/thirdImage"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_podcasts2" />
 
     <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:id="@+id/thirdImage"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        android:layout_marginRight="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/fourthImage"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_podcasts3" />
 
     <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:id="@+id/fourthImage"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginTop="8dp"
+        android:layout_marginRight="4dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/ic_podcasts4" />
 
     <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:id="@+id/fifthImage"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginEnd="270dp"
-        android:layout_marginRight="270dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginRight="268dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/firstImage"
         app:srcCompat="@mipmap/ic_podcasts5" />
+
 </android.support.constraint.ConstraintLayout>

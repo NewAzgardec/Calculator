@@ -10,11 +10,12 @@
     <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view"
         style="@style/CardViewStyle"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="352dp"
+        android:layout_height="352dp"
+        android:layout_marginTop="16dp"
         android:layout_gravity="center"
         card_view:cardCornerRadius="20dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="For you"
+            android:text="@string/title_of_form"
             android:textSize="18sp"
             android:textStyle="bold" />
 
