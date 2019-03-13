@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Fragment</string>
+    <string name="text_view">Add emoticons</string>
+    <string name="button_text">smile</string>
+</resources>
