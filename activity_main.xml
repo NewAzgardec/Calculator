@@ -15,10 +15,10 @@
 
     <Button
         android:id="@+id/edit"
-        android:layout_width="283dp"
+        android:layout_width="284dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/bottom"
         android:text="@string/edit_button"
         android:textStyle="bold" />
