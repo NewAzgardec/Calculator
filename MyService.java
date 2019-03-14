@@ -5,8 +5,7 @@ import android.content.Intent;
 
 public class MyService extends IntentService {
 
-    public MyService()
-    {
+    public MyService() {
         super(MyService.class.getSimpleName());
     }
 
@@ -16,18 +15,14 @@ public class MyService extends IntentService {
         sendMyBroadCast();
     }
 
-    private void sendMyBroadCast()
-    {
-        try
-        {
+    private void sendMyBroadCast() {
+        try {
             Intent broadCastIntent = new Intent();
             broadCastIntent.setAction(MainActivity.BROADCAST_ACTION);
 
             sendBroadcast(broadCastIntent);
 
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }

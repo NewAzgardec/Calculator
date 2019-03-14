@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String BROADCAST_ACTION = "com.06032019.demo";
 
-    Button startServiceButton;
-    TextView receiverTextView;
+    Button startServiceBt;
+    TextView receiverTv;
     MyBroadCastReceiver myBroadCastReceiver;
 
     @Override
@@ -28,76 +28,60 @@ public class MainActivity extends AppCompatActivity {
         registerMyReceiver();
     }
 
-    private void initializeMembers()
-    {
-        startServiceButton = findViewById(R.id.start_service);
-        receiverTextView = findViewById(R.id.receiver_textview);
+    private void initializeMembers() {
+        startServiceBt = findViewById(R.id.start_service);
+        receiverTv = findViewById(R.id.receiver_textview);
 
         myBroadCastReceiver = new MyBroadCastReceiver();
     }
 
     private void setListener() {
 
-        try
-        {
-            startServiceButton.setOnClickListener(new View.OnClickListener() {
+        try {
+            startServiceBt.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
                     startMyService();
                 }
             });
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
     }
 
-    private void startMyService()
-    {
-        try
-        {
+    private void startMyService() {
+        try {
             Intent myServiceIntent = new Intent(this, MyService.class);
             startService(myServiceIntent);
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
     private void registerMyReceiver() {
 
-        try
-        {
+        try {
             IntentFilter intentFilter = new IntentFilter();
             intentFilter.addAction(BROADCAST_ACTION);
             registerReceiver(myBroadCastReceiver, intentFilter);
-        }
-        catch (Exception ex)
-        {
+        } catch (Exception ex) {
             ex.printStackTrace();
         }
 
     }
 
-    class MyBroadCastReceiver extends BroadcastReceiver
-    {
+    class MyBroadCastReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            try
-            {
-                if (receiverTextView != null)
-                {
-                    receiverTextView.setText("You did it!\nBroadcast Received.");
+            try {
+                if (receiverTv != null) {
+                    receiverTv.setText("You did it!\nBroadcast Received.");
                 }
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 ex.printStackTrace();
             }
         }
