@@ -5,12 +5,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-public class PatternFragmentActivity extends FragmentPagerAdapter {
+public class PatternFragmentAdapter extends FragmentPagerAdapter {
     static final int COUNT_OF_PAGES=3;
     private String [] tabTitles = new String[]{"New episodes","In progress","Downloads"};
     private Context context;
 
-    public PatternFragmentActivity(FragmentManager fm, Context context) {
+    public PatternFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context=context;
     }
