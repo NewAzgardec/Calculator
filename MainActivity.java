@@ -14,8 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static final String BROADCAST_ACTION = "com.06032019.demo";
 
-    Button startServiceBt;
-    TextView receiverTv;
+    Button startServiceButton;
+    TextView receiverTextView;
     MyBroadCastReceiver myBroadCastReceiver;
 
     @Override
@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeMembers()
     {
-        startServiceBt = findViewById(R.id.start_service);
-        receiverTv = findViewById(R.id.receiver_textview);
+        startServiceButton = findViewById(R.id.start_service);
+        receiverTextView = findViewById(R.id.receiver_textview);
 
         myBroadCastReceiver = new MyBroadCastReceiver();
     }
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         try
         {
-            startServiceBt.setOnClickListener(new View.OnClickListener() {
+            startServiceButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
 
@@ -91,9 +91,9 @@ public class MainActivity extends AppCompatActivity {
 
             try
             {
-                if (receiverTv != null)
+                if (receiverTextView != null)
                 {
-                    receiverTv.setText("You did it!\nBroadcast Received.");
+                    receiverTextView.setText("You did it!\nBroadcast Received.");
                 }
             }
             catch (Exception ex)
