@@ -15,20 +15,15 @@ public class HeaderView extends LinearLayout {
     private TextView userEmail;
 
     public HeaderView(Context context) {
-        super(context);
-
-        init();
+        this(context, null);
     }
 
     public HeaderView(Context context, @Nullable AttributeSet attributeSet) {
-        super(context, attributeSet);
-
-        init();
+        this(context, attributeSet, 0);
     }
 
     public HeaderView(Context context, @Nullable AttributeSet attributeSet, int defStyleAttribute) {
         super(context, attributeSet, defStyleAttribute);
-
         init();
     }
 
@@ -42,7 +37,11 @@ public class HeaderView extends LinearLayout {
     }
 
     public void updateImage(String colorCode) {
-        int color = Color.parseColor(colorCode);
-        userImage.setColorFilter(color);
+        try {
+            int color = Color.parseColor(colorCode);
+            userImage.setColorFilter(color);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

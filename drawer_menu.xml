@@ -19,6 +19,7 @@
             android:id="@+id/navigation_gallery"
             android:icon="@drawable/ic_gallery"
             android:title="@string/gallery" />
+
     </group>
 
     <item android:title="Other">
