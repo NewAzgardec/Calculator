@@ -16,11 +16,12 @@
         android:layout_marginEnd="252dp"
         android:layout_marginRight="252dp"
         android:layout_marginBottom="12dp"
-        android:onClick="sumOfElements"
+
         android:text="@string/plus"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/minus"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondNumber" />
 
@@ -31,15 +32,15 @@
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginBottom="12dp"
-        android:onClick="minOfElements"
+
         android:text="@string/minus"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/multiply"
-        app:layout_constraintEnd_toStartOf="@+id/result"
-        app:layout_constraintHorizontal_bias="0.416"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/plus" />
 
@@ -53,11 +54,11 @@
         android:layout_marginEnd="252dp"
         android:layout_marginRight="252dp"
         android:layout_marginBottom="12dp"
-        android:onClick="mulOfElements"
         android:text="@string/multiply"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/divide"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/minus" />
 
@@ -71,11 +72,11 @@
         android:layout_marginEnd="252dp"
         android:layout_marginRight="252dp"
         android:layout_marginBottom="260dp"
-        android:onClick="divOfElements"
         android:text="@string/divide"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/multiply" />
 
@@ -91,7 +92,7 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:hint="@string/first_number_hint"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/secondNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +111,7 @@
         android:layout_marginBottom="44dp"
         android:ems="10"
         android:hint="@string/second_number_hint"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/plus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
