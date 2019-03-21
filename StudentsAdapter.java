@@ -2,6 +2,7 @@ package com.epam.themes.collectionviews.recyclerview;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 
@@ -62,7 +63,6 @@ public class StudentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
     }
 
-
     @Override
     public int getItemCount() {
         if (isShowLastViewAsLoading) {
@@ -79,11 +79,16 @@ public class StudentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
     }
 
-    public void addItems(final List<Student> result) {
-        studentList.addAll(result);
-        notifyDataSetChanged();
-    }
+    public void addItems(List<Student> studentList) {
 
+        List<Student> newList = new ArrayList<>();
+        newList.addAll(this.studentList);
+        newList.addAll(studentList);
+
+        DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtilCallback(this.studentList, newList));
+        this.studentList.addAll(studentList);
+        diffResult.dispatchUpdatesTo(this);
+    }
 
     public void insertItem(final int position, final Student student) {
         studentList.add(position, student);
@@ -123,7 +128,6 @@ public class StudentsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
 
         notifyItemChanged(adapterPosition);
-
 
     }
 }

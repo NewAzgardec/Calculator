@@ -4,9 +4,7 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.support.annotation.NonNull;
-import android.support.annotation.UiThread;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.epam.cleancodetest.R;
@@ -16,7 +14,6 @@ public class LessonView extends CompoundRelativeLayout {
 
     private TextView dateView;
     private TextView themeView;
-    private ImageView avatarView;
 
     private String attributeDate;
     private String attributeTheme;
@@ -43,27 +40,12 @@ public class LessonView extends CompoundRelativeLayout {
     public void onViewInflated(@NonNull final Context context) {
         dateView = findViewById(R.id.dateView);
         themeView = findViewById(R.id.themeView);
-        avatarView = findViewById(R.id.avatarView);
     }
 
     @Override
     public int getLayoutResId() {
 
         return R.layout.view_lesson;
-    }
-
-    @UiThread
-    public LessonView setLessonDate(final String date) {
-        dateView.setText(date);
-
-        return this;
-    }
-
-    @UiThread
-    public LessonView setLessonTheme(final String theme) {
-        themeView.setText(theme);
-
-        return this;
     }
 
     private void parseAttributes(final Context context, final AttributeSet attrs) {

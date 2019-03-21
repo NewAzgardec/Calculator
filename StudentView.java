@@ -17,7 +17,6 @@ import com.epam.themes.uicomponents.base.CompoundRelativeLayout;
 
 public class StudentView extends CompoundRelativeLayout {
 
-    private String studentNameStr;
     private TextView studentNameTextView;
     private TextView studentHwCountTextView;
     private ImageView studentAvatarView;
@@ -54,20 +53,22 @@ public class StudentView extends CompoundRelativeLayout {
         return R.layout.student_view;
     }
 
-    @UiThread
-    public StudentView setStudentName(final String studentName) {
-        studentNameTextView.setText(studentName);
-        setStudentNameStr(studentName);
+    public StudentView setStudentName(final String name) {
+        studentNameTextView.setText(name);
+        return this;
+    }
+
+    public StudentView setStudentHwCount(final String homework) {
+        studentHwCountTextView.setText(homework);
+        return this;
+    }
+
+    public StudentView setStudentAvatar(Drawable studentAvatar) {
+        studentAvatarView.setImageDrawable(studentAvatar);
 
         return this;
     }
 
-    @UiThread
-    public StudentView setStudentHwCount(final String studentHw) {
-        studentHwCountTextView.setText(studentHw);
-
-        return this;
-    }
 
     private void parseAttributes(final Context pContext, final AttributeSet pAttrs) {
         final Resources.Theme theme = pContext.getTheme();
@@ -83,16 +84,4 @@ public class StudentView extends CompoundRelativeLayout {
             styledAttributes.recycle();
         }
     }
-
-    public StudentView setStudentAvatar(Drawable studentAvatar) {
-        studentAvatarView.setImageDrawable(studentAvatar);
-
-        return this;
-    }
-
-    public void setStudentNameStr(String studentNameStr) {
-
-        this.studentNameStr = studentNameStr;
-    }
-
 }
